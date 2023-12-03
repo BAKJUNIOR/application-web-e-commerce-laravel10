@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\clientController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\SliderController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,6 +41,20 @@ Route::get('/Admin/Slider', [AdminController::class ,'Slider']);
 Route::get('/Admin/addproduct', [AdminController::class ,'addproduct']);
 Route::get('/Admin/product', [AdminController::class ,'product']);  
 Route::get('/Admin/order', [AdminController::class ,'order']);  
+
+// Categories controller
+Route::post('/Admin/SaveCategorie', [CategorieController::class ,'SaveCategorie']);  // Savegarder vers la base de donnée
+Route::delete('/Admin/deleteCategorie/{id}', [CategorieController::class ,'deleteCategorie']);  
+Route::get('/Admin/editeCategorie/{id}', [CategorieController::class ,'editeCategorie']);  
+Route::put('/Admin/UpdateCategorie/{id}', [CategorieController::class ,'UpdateCategorie']);  
+
+// Slider controller
+Route::post('/Admin/SaveSlider', [SliderController::class ,'SaveSlider']);  
+Route::delete('/Admin/deleteSlider/{id}', [SliderController::class ,'deleteSlider']);  
+Route::get('/Admin/editeSlider/{id}', [SliderController::class ,'editeSlider']);  
+Route::put('/Admin/UpdateSlider/{id}', [SliderController::class ,'UpdateSlider']);  
+
+
 
 
 

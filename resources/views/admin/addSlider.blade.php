@@ -35,22 +35,44 @@
               <div class="card-header">
                 <h3 class="card-title">Add slider</h3>
               </div>
+    
               <!-- /.card-header -->
+              @if (count($errors) > 0)
+              <div class="alert alert-danger">
+                <ul>
+                  @foreach ($errors->all() as $error)
+                  <li >{{$error}}</li>
+                  @endforeach
+                  
+                </ul>
+              </div>
+              @endif
+
+      @if (Session :: has("status"))
+              <div class="alert alert-success">
+                {{Session::get("status")}}
+              </div>
+     @endif
+
+     
+
               <!-- form start -->
-              <form >
+               
+              <form action="{{url('/Admin/SaveSlider')}}" method="POST" enctype="multipart/form-data">
+                @csrf
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Slider description 1</label>
-                    <input type="text" name="description1" class="form-control" id="exampleInputEmail1" placeholder="Enter slider description">
+                    <input type="text" required name="description1" class="form-control" id="exampleInputEmail1" placeholder="Enter slider description">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Slider description 2</label>
-                    <input type="text" name="description2" class="form-control" id="exampleInputEmail1" placeholder="Enter slider description">
+                    <input type="text" required name="description2" class="form-control" id="exampleInputEmail1" placeholder="Enter slider description">
                   </div>
                   <label for="exampleInputFile">Slider image</label>
                   <div class="input-group">
                     <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="exampleInputFile">
+                      <input type="file" required  name="image" class="custom-file-input" id="exampleInputFile">
                       <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                     </div>
                     <div class="input-group-append">

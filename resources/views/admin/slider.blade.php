@@ -1,7 +1,3 @@
-
-
-
-
 @extends('Admin_layout.master');
 
 @section('title')
@@ -38,7 +34,16 @@
               <div class="card-header">
                 <h3 class="card-title">All Sliders</h3>
               </div>
+
+
+              @if (Session :: has("status"))
+              <div class="alert alert-success">
+                {{Session::get("status")}}
+              </div>
+              @endif
+
               <!-- /.card-header -->
+              <input type="hidden" {{$increment=1}}>
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
@@ -51,36 +56,38 @@
                   </tr>
                   </thead>
                   <tbody>
+                   
+                    @foreach ($sliders as $slider)
+
+                    
                   <tr>
-                    <td>1</td>
+                    <td>{{$increment}}</td>
                     <td>
-                      <img src="{{ asset('backend/dist/img/user2-160x160.jpg') }}" style="height : 50px; width : 50px" class="img-circle elevation-2" alt="User backend/dist">
+                      <img src="{{ asset('storage/slider_images/'.$slider->image) }}" style="height : 50px; width : 50px" class="img-circle elevation-2" alt="User backend/dist">
                     </td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>5</td>
                     <td>
-                      <a href="{{ asset('') }}#" class="btn btn-warning">Activate</a>
-                      <a href="{{ asset('') }}#" class="btn btn-primary"><i class="nav-icon fas fa-edit"></i></a>
-                      <a href="{{ asset('') }}#" id="delete" class="btn btn-danger" ><i class="nav-icon fas fa-trash"></i></a>
+                      {{$slider->description1}}
                     </td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
                     <td>
-                      <img src="{{ asset('backend/dist/img/user2-160x160.jpg') }}" style="height : 50px; width : 50px" class="img-circle elevation-2" alt="User backend/dist">
+                      {{$slider->description2}}
                     </td>
-                    <td>Internet
-                      Explorer 5.0
-                    </td>
-                    <td>5</td>
                     <td>
                       <a href="{{ asset('') }}#" class="btn btn-success">Unactivate</a>
-                      <a href="{{ asset('') }}#" class="btn btn-primary"><i class="nav-icon fas fa-edit"></i></a>
-                      <a href="{{ asset('') }}#" id="delete" class="btn btn-danger" ><i class="nav-icon fas fa-trash"></i></a>
-                    </td>
+                      <a href="{{url('/Admin/editeSlider/'.$slider->id)}}" class="btn btn-primary"><i class="nav-icon fas fa-edit"></i></a>
+
+
+                      <form action="{{url('/Admin/deleteSlider/'.$slider->id)}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <input type="submit" id="delete" value="Supprimer" class="btn btn-danger">
+                      </form>
+
+                      </td> 
                   </tr>
+                        {{$increment++}}
+                    @endforeach
+
+
                   </tbody>
                   <tfoot>
                   <tr>
@@ -136,7 +143,7 @@
   </script>
 
   <!-- DataTables -->
-<link rel="stylesheet" href="{{ asset('backend/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"') }}>
+<link rel="stylesheet" href="{{ asset('backend/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
 <link rel="stylesheet" href="{{ asset('backend/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
 
     

@@ -36,6 +36,15 @@
               <div class="card-header">
                 <h3 class="card-title">All categories</h3>
               </div>
+
+              @if (Session :: has("status"))
+              <div class="alert alert-success">
+                {{Session::get("status")}}
+              </div>
+              @endif
+
+              <input type="hidden" {{$increment =1}}>
+              
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
@@ -46,27 +55,29 @@
                     <th>Actions</th>
                   </tr>
                   </thead>
-                  <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>
-                      <a href="#" class="btn btn-primary"><i class="nav-icon fas fa-edit"></i></a>
-                      <a href="#" id="delete" class="btn btn-danger" ><i class="nav-icon fas fa-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Internet
-                      Explorer 5.0
-                    </td>
-                    <td>
-                      <a href="#" class="btn btn-primary"><i class="nav-icon fas fa-edit"></i></a>
-                      <a href="#" id="delete" class="btn btn-danger" ><i class="nav-icon fas fa-trash"></i></a>
-                    </td>
-                  </tr>
+                  <tbody >
+                    @foreach ($categories as $category)
+                        
+                    <tr>
+                      <td>{{$increment}}</td>
+                      <td>{{$category->categorie_name}}
+                      </td>
+                      <td>
+                        <a href="{{url('/Admin/editeCategorie/'.$category->id)}}" class="btn btn-primary"><i class="nav-icon fas fa-edit"></i></a>
+
+                        <form action="{{url('/Admin/deleteCategorie/'.$category->id)}}" method="POST" >
+                         @csrf
+                         @method('DELETE')
+                          <!-- <a href="#" id="delete" class="btn btn-danger" ><i class="nav-icon fas fa-trash"></i></a> -->  
+                         <input type="submit" id="delete" class="btn btn-danger" value="Supprimer">
+                        </form>
+                      
+                      </td>
+                    </tr>
+                    <input type="hidden" {{$increment++}}>
+                    @endforeach
+                  
+                 
                   </tbody>
                   <tfoot>
                   <tr>
@@ -121,7 +132,7 @@
   </script>
 
   <!-- DataTables -->
-<link rel="stylesheet" href="{{ asset('backend/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"') }}>
+<link rel="stylesheet" href="{{ asset('backend/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
 <link rel="stylesheet" href="{{ asset('backend/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
 
     

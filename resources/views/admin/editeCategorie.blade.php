@@ -1,8 +1,8 @@
 
- @extends('Admin_layout.master');
+@extends('Admin_layout.master');
 
 @section('title')
-    Admin | Add Categories
+    Admin | Edite Categories
 @endsection
 
 @section('content')
@@ -35,7 +35,7 @@
             <!-- jquery validation -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title"> Ajouter une catégorie</small></h3>
+                <h3 class="card-title"> Modifier catégorie</small></h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -47,18 +47,19 @@
                 @endif
               
 
-              <form action="{{url('Admin/SaveCategorie')}}" method="POST">
+              <form action="{{url('Admin/UpdateCategorie/'.$categorie->id)}}" method="POST">
                @csrf
+               @method('PUT')
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nom de catégorie</label>
-                    <input type="text" name="category_name" class="form-control" id="exampleInputEmail1" placeholder="Enter category" required>
+                    <input type="text" value="{{$categorie->categorie_name}}" name="category_name" class="form-control" id="exampleInputEmail1" placeholder="Enter category" required>
                   </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
                   <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-                  <input type="submit" class="btn btn-primary" value="Sauvegarder" >
+                  <input type="submit" class="btn btn-primary" value="Update" >
                 </div>
               </form>
               

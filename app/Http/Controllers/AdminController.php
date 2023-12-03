@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Categories;
+use App\Models\Slider;
 
 class AdminController extends Controller
 {
@@ -15,7 +17,9 @@ class AdminController extends Controller
      }
 
      public function Categorie(){
-        return view('Admin.Categorie');
+    
+      $categories = Categories::get();
+        return view('Admin.Categorie')->with( 'categories',$categories);
      }
      
      public function addSlider(){
@@ -23,7 +27,9 @@ class AdminController extends Controller
      }
 
      public function Slider(){
-        return view('Admin.Slider');
+
+      $sliders = Slider::get();
+        return view('Admin.Slider')->with("sliders" , $sliders);
      }
 
      public function addproduct(){
