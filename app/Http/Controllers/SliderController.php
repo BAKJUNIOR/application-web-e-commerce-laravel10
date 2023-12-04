@@ -57,10 +57,9 @@ class SliderController extends Controller
 
         $slider = Slider :: find($id);
        
-        return 
-        
-        view('Admin.editeSlider')->with("slider", $slider);
+        return view('Admin.editeSlider')->with("slider", $slider);
       }
+
 
       public function UpdateSlider($id , Request $request){
 
@@ -93,17 +92,32 @@ class SliderController extends Controller
 
         $slider->update();
 
-        return redirect('/Admin/slider')->with("status", "Votre slider a été modifié avec succes");
-        
+        return redirect('/Admin/Slider')->with("status", "Votre slider a été modifié avec succes");
 
-
-      
       }
 
 
       
 
-      
+      public function DesactiverSlider($id){
+
+        $slider = Slider :: find($id);
+        $slider->status = 0 ;
+
+        $slider->update();
+       
+        return back();
+      }
+
+      public function activerSlider($id){
+
+        $slider = Slider :: find($id);
+        $slider->status = 1 ;
+
+        $slider->update();
+       
+        return back();
+      }
 
     
 }

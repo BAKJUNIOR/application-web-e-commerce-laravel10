@@ -5,6 +5,8 @@ use App\Http\Controllers\clientController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\ProductController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -53,6 +55,19 @@ Route::post('/Admin/SaveSlider', [SliderController::class ,'SaveSlider']);
 Route::delete('/Admin/deleteSlider/{id}', [SliderController::class ,'deleteSlider']);  
 Route::get('/Admin/editeSlider/{id}', [SliderController::class ,'editeSlider']);  
 Route::put('/Admin/UpdateSlider/{id}', [SliderController::class ,'UpdateSlider']);  
+Route::put('/Admin/DesactiverSlider/{id}', [SliderController::class ,'DesactiverSlider']);  
+Route::put('/Admin/activerSlider/{id}', [SliderController::class ,'activerSlider']);  
+
+// Product controller
+Route::post('/Admin/SaveProduct', [ProductController::class ,'SaveProduct']); 
+Route::delete('/Admin/deleteProduct/{id}', [ProductController::class ,'deleteProduct']); 
+Route::get('/Admin/editeProduct/{id}', [ProductController::class ,'editeProduct']); 
+Route::put('/Admin/UpdateProduct/{id}', [ProductController::class ,'UpdateProduct']); 
+Route::put('/Admin/DesactiverProduct/{id}', [ProductController::class ,'DesactiverProduct']); 
+Route::put('/Admin/activerProduct/{id}', [ProductController::class ,'activerProduct']); 
+
+
+
 
 
 

@@ -2,7 +2,7 @@
 @extends('Admin_layout.master');
 
 @section('title')
-    Admin | Add Produits
+    Admin | Edite Produits
 @endsection
 
 
@@ -35,7 +35,7 @@
             <!-- jquery validation -->
             <div class="card card-warning">
               <div class="card-header">
-                <h3 class="card-title">Add product</h3>
+                <h3 class="card-title">Edite product</h3>
               </div>
               <!-- /.card-header -->
 
@@ -60,21 +60,22 @@
 
 
               <!-- form start -->
-              <form id="quickForm" action="{{url('/Admin/SaveProduct')}}" method="POST" enctype="multipart/form-data">
+              <form id="quickForm" action="{{url('/Admin/UpdateProduct/'.$products->id)}}" method="POST" enctype="multipart/form-data">
               @csrf
+              @method('PUT')
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Product name</label>
-                    <input type="text" required name="product_name" class="form-control" id="exampleInputEmail1" placeholder="Enter product name">
+                    <input type="text" required name="product_name" value="{{$products->product_name}}"  class="form-control" id="exampleInputEmail1" placeholder="Enter product name">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Product price</label>
-                    <input type="number" required name="product_price" class="form-control" id="exampleInputEmail1" placeholder="Enter product price" min="1">
+                    <input type="number" required name="product_price" value="{{$products->product_price}}"  class="form-control" id="exampleInputEmail1" placeholder="Enter product price" min="1">
                   </div>
                   <div class="form-group">
                     <label>Product category</label>
                     <select name="product_categorie"  required class="form-control select2" style="width: 100%;">
-                      <option selected="selected" value="">Sélectionner catégorie</option>
+                      <option selected="selected" value="{{$products->product_categorie}}">{{$products->product_categorie}}</option>
 
                       @foreach ($categories as $categorie)
                       <option>{{$categorie->categorie_name}}</option>
@@ -86,7 +87,7 @@
                   <label for="exampleInputFile">Product image</label>
                   <div class="input-group">
                     <div class="custom-file">
-                      <input type="file" name="product_image" required class="custom-file-input" id="exampleInputFile">
+                      <input type="file" name="product_image"  class="custom-file-input" id="exampleInputFile">
                       <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                     </div>
                     <div class="input-group-append">
@@ -97,7 +98,7 @@
                 <!-- /.card-body -->
                 <div class="card-footer">
                   <!-- <button type="submit" class="btn btn-success">Submit</button> -->
-                  <input type="submit" class="btn btn-warning" value="Save">
+                  <input type="submit" class="btn btn-warning" value="Update">
                 </div>
 
               </form>

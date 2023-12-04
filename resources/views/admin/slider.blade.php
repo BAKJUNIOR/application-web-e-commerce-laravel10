@@ -63,7 +63,7 @@
                   <tr>
                     <td>{{$increment}}</td>
                     <td>
-                      <img src="{{ asset('storage/slider_images/'.$slider->image) }}" style="height : 50px; width : 50px" class="img-circle elevation-2" alt="User backend/dist">
+                      <img src="{{asset('storage/slider_images/'.$slider->image) }}" style="height : 50px; width : 50px" class="img-circle elevation-2" alt="User backend/dist">
                     </td>
                     <td>
                       {{$slider->description1}}
@@ -72,7 +72,25 @@
                       {{$slider->description2}}
                     </td>
                     <td>
-                      <a href="{{ asset('') }}#" class="btn btn-success">Unactivate</a>
+
+                      @if ($slider->status == 1)
+
+                      <form action="{{url('/Admin/DesactiverSlider/'.$slider->id)}}" method="POST">
+                        @csrf
+                        @method('PUT')
+              
+                      <input type="submit"  class="btn btn-success" value="Desactiver">
+                      </form>
+
+                      @else
+                      <form action="{{url('/Admin/activerSlider/'.$slider->id)}}" method="POST">
+                        @csrf
+                        @method('PUT')
+              
+                      <input type="submit"  class="btn btn-warning" value="Activer">
+                      </form>
+                      @endif
+
                       <a href="{{url('/Admin/editeSlider/'.$slider->id)}}" class="btn btn-primary"><i class="nav-icon fas fa-edit"></i></a>
 
 
@@ -85,6 +103,7 @@
                       </td> 
                   </tr>
                         {{$increment++}}
+                        
                     @endforeach
 
 
