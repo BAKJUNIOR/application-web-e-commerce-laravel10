@@ -2,7 +2,7 @@
 @extends('client_layout.master')  <!-- Hérite tout ce qui est dans le dossier client_layout.master-->
 
 @section('title')
-   Home
+   Accueil
 @endsection
 
 
@@ -11,7 +11,7 @@
     <!-- Start Slider -->
     <div id="slides-shop" class="cover-slides">
         <ul class="slides-container">
- 
+
             @foreach ($sliders as $slider)
 
             <li class="text-center">
@@ -28,11 +28,11 @@
                     </div>
                 </div>
             </li>
-                
+
             @endforeach
 
-         
-           
+
+
         </ul>
         <div class="slides-navigation">
             <a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
@@ -119,7 +119,7 @@
             <div class="row special-list">
 
                 @foreach ($products as $product)
-                    
+
                 <div class="col-lg-3 col-md-6 special-grid best-seller">
                     <div class="products-single fix">
                         <div class="box-img-hover">
@@ -138,15 +138,15 @@
                         </div>
                         <div class="why-text">
                             <h4>{{$product->product_name}}</h4>
-                            <h5> {{$product->product_price}} FCFA</h5>
+                            <h5>{{$product->product_price}} FCFA</h5>
                         </div>
                     </div>
                 </div>
 
                 @endforeach
 
- 
-                
+
+
             </div>
         </div>
     </div>

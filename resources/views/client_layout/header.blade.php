@@ -54,7 +54,7 @@
                                 <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT30
                             </li>
                             <li>
-                                <i class="fab fa-opencart"></i> Off 50%! Shop Now 
+                                <i class="fab fa-opencart"></i> Off 50%! Shop Now
                             </li>
                         </ul>
                     </div>
@@ -100,7 +100,7 @@
                     <li class="side-menu">
                         <a href="">
                             <i class="fa fa-shopping-bag"></i>
-                            <span class="badge">3</span>
+                            <span class="badge">{{Session :: has('cart') ? Session :: get('cart') -> totalQty : 0}}</span>
                             <p>Mon panier</p>
                         </a>
                     </li>
@@ -113,24 +113,26 @@
             <a href="#" class="close-side"><i class="fa fa-times"></i></a>
             <li class="cart-box">
                 <ul class="cart-list">
-                    <li>
-                        <a href="#" class="photo"><img src="fontend/images/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
-                        <h6><a href="#">Delica omtantur </a></h6>
-                        <p>1x - <span class="price">$80.00</span></p>
-                    </li>
-                    <li>
-                        <a href="#" class="photo"><img src="fontend/images/img-pro-02.jpg" class="cart-thumb" alt="" /></a>
-                        <h6><a href="#">Omnes ocurreret</a></h6>
-                        <p>1x - <span class="price">$60.00</span></p>
-                    </li>
-                    <li>
-                        <a href="#" class="photo"><img src="fontend/images/img-pro-03.jpg" class="cart-thumb" alt="" /></a>
-                        <h6><a href="#">Agam facilisis</a></h6>
-                        <p>1x - <span class="price">$40.00</span></p>
-                    </li>
+
+                    @if (Session::has('topCart'))
+
+                        @foreach (Session::get('topCart') as $product)
+
+                            <li>
+                                <a href="#" class="photo"><img src="{{asset('storage/product_images/'.$product["product_image"])}}" class="cart-thumb" alt="" /></a>
+                                <h6><a href="#">{{$product["product_name"]}}</a></h6>
+                                <p>{{$product["qty"]}}x - <span class="price">{{$product["product_price"]}} FCFA</span></p>
+                            </li>
+
+
+                        @endforeach
+
+                    @endif
+
+
                     <li class="total">
-                        <a href="{{url('/panier')}}" class="btn btn-default hvr-hover btn-cart">VOIR LE PANIER</a>
-                        <span class="float-right"><strong>Total</strong>: $180.00</span>
+                        <a href="{{url('/panier')}}" class="btn btn-default hvr-hover btn-cart">VOIR PANIER</a>
+                        <span class="float-none"><strong>Total</strong>:{{Session::get('cart')->totalPrice}}</span>
                     </li>
                 </ul>
             </li>

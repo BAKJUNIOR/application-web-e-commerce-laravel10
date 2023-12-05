@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use Illuminate\Http\Request;
 use App\Models\Slider;
 use App\Models\Product;
+use Illuminate\Support\Facades\Session;
 
 class clientController extends Controller
 {
@@ -38,8 +40,20 @@ class clientController extends Controller
    }
  
    public function AjouterPanier($id){
-    $products = Product :: get();
-    print($products);
+
+    $product = Product :: find($id);
+    
+    $oldCard = Session :: has ('cart') ? Session::get('cart') : null;
+    $cart = new Cart($oldCard);
+    $cart->add($product);
+
+    Session :: put ('cart', $cart);
+    Session :: put('topCart', $cart->items);
+
+  return back();
+
+
+
    }
  
    

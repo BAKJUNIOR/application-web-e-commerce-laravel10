@@ -4,9 +4,9 @@ namespace App\Models;
 
     class Cart{
 
-        public $items = null;
-        public $totalQty = 0;
-        public $totalPrice = 0;
+        public $items = null; // contient tous les items possible(prix du produit , qte)
+        public $totalQty = 0; // contient la qte de produit
+        public $totalPrice = 0; // le total des prix selectionner
 
 
         public function __construct($oldCart){
@@ -19,7 +19,7 @@ namespace App\Models;
 
         }
 
-        public function add($item){
+        public function add($item){ // ajouter panier fonction
 
             $storedItem = ['qty' => 0, 'product_id' => 0, 'product_name' => $item->product_name,
             'product_price' => $item->product_price, 'product_image' => $item->product_image, 'item' =>$item];
