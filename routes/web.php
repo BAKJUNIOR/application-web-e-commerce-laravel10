@@ -64,12 +64,4 @@ Route::delete('/Admin/deleteProduct/{id}', [ProductController::class ,'deletePro
 Route::get('/Admin/editeProduct/{id}', [ProductController::class ,'editeProduct']); 
 Route::put('/Admin/UpdateProduct/{id}', [ProductController::class ,'UpdateProduct']); 
 Route::put('/Admin/DesactiverProduct/{id}', [ProductController::class ,'DesactiverProduct']); 
-Route::put('/Admin/activerProduct/{id}', [ProductController::class ,'activerProduct']); 
-
-
-
-
-
-
-
-
+Route::put('/Admin/activerProduct/{id}', [ProductController::class ,'activerProduct']);

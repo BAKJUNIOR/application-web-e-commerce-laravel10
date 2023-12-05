@@ -12,21 +12,21 @@
                     </select>
                 </div>
                 <div class="right-phone-box">
-                    <p>Call US :- <a href="#"> +11 900 800 100</a></p>
+                    <p>Appelez-nous :- <a href="#"> +225 0789999981</a></p>
                 </div>
                 <div class="our-link">
                     <ul>
-                        <li><a href="#"><i class="fa fa-user s_color"></i> My Account</a></li>
-                        <li><a href="#"><i class="fas fa-location-arrow"></i> Our location</a></li>
-                        <li><a href="#"><i class="fas fa-headset"></i> Contact Us</a></li>
+                        <li><a href="#"><i class="fa fa-user s_color"></i> MON COMPTE</a></li>
+                        <li><a href="https://maps.app.goo.gl/QsyXfA7LMm2B5Cxr6"><i class="fas fa-location-arrow"></i> NOTRE EMPLACEMENT</a></li>
+                        <li><a href="tel:+225 0789999981"><i class="fas fa-headset"></i> CONTACTEZ-NOUS</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="login-box">
-                    <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
-                        <option>Register Here</option>
-                        <option>Sign In</option>
+                    <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Inscrivez-vous ici">
+                        <option>Inscrivez-vous ici</option>
+                        <option>Connectez-vous</option>
                     </select>
                 </div>
                 <div class="text-slid-box">
@@ -82,9 +82,12 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                    <li class="nav-item {{request()->is('/') ? 'active' : '' }}"><a class="nav-link" href="{{url('/')}}">Home</a></li>
+                    <li class="nav-item {{request()->is('/') ? 'active' : '' }}"><a class="nav-link" href="{{url('/')}}">Accueil</a></li>
                     <li class="nav-item {{request()->is('boutique') ? 'active' : '' }}">
                         <a href="{{url('/boutique')}}" class="nav-link">BOUTIQUE</a>
+                    </li>
+                    <li class="nav-item {{request()->is('SoinsBeaute') ? 'active' : '' }}">
+                        <a href="{{url('/SoinsBeaute')}}" class="nav-link">NOS SOINS DE BEAUTE</a>
                     </li>
                 </ul>
             </div>

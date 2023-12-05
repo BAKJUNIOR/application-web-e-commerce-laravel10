@@ -3,81 +3,81 @@
         <div class="main-instagram owl-carousel owl-theme">
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="fontend/images/instagram-img-01.jpg" alt="" />
+                    <img src="fontend/images/produit4.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp "></i></a>
                     </div>
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="fontend/images/instagram-img-02.jpg" alt="" />
+                    <img src="fontend/images/produit4.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp "></i></a>
                     </div>
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="fontend/images/instagram-img-03.jpg" alt="" />
+                    <img src="fontend/images/produit4.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp "></i></a>
                     </div>
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="fontend/images/instagram-img-04.jpg" alt="" />
+                    <img src="fontend/images/produit4.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp "></i></a>
                     </div>
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="fontend/images/instagram-img-05.jpg" alt="" />
+                    <img src="fontend/images/produit4.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp "></i></a>
                     </div>
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="fontend/images/instagram-img-06.jpg" alt="" />
+                    <img src="fontend/images/produit4.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp "></i></a>
                     </div>
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="fontend/images/instagram-img-07.jpg" alt="" />
+                    <img src="fontend/images/produit4.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp "></i></a>
                     </div>
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="fontend/images/instagram-img-08.jpg" alt="" />
+                    <img src="fontend/images/produit4.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp "></i></a>
                     </div>
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="fontend/images/instagram-img-09.jpg" alt="" />
+                    <img src="fontend/images/produit4.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp "></i></a>
                     </div>
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="fontend/images/instagram-img-05.jpg" alt="" />
+                    <img src="fontend/images/produit4.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp "></i></a>
                     </div>
                 </div>
             </div>
@@ -93,10 +93,11 @@
 				<div class="row">
 					<div class="col-lg-4 col-md-12 col-sm-12">
 						<div class="footer-top-box">
-							<h3>Business Time</h3>
+							<h3>Temps de travail </h3>
 							<ul class="list-time">
-								<li>Monday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
+								<li>Mardi - Mercredi:  09:00–20:00</li> <li>Jeudi - Vendredi : 09:00–20:00</li> <li>Samedi - Dimanche : 09:00–20:00</li> <li>Lundi: <span>Fermé</span></li>
 							</ul>
+                        
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-12 col-sm-12">
@@ -113,8 +114,8 @@
 					</div>
 					<div class="col-lg-4 col-md-12 col-sm-12">
 						<div class="footer-top-box">
-							<h3>Social Media</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<h3>Réseaux sociaux </h3>
+							<p>Le client est très important, nos lien pour un suivi..</p>
 							<ul>
                                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
@@ -131,36 +132,37 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-widget">
-                            <h4>About Freshshop</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <h4>À propos d' En Aparté</h4>
+                            <p>Bienvenue chez En Aparté, dédié à la branté et au bien-être d'exception. Découvrez notre sélection de produits capillaires, de soins du visage et du corps pour une expérience luxueuse.</p>
+<p>Chez En Aparté, votre destination pour une beauté raffinée. Notre équipe experte vous offre des services personnalisés, mettant en avant votre élégance naturelle. Plongez dans une atmosphère où la qualité est notre priorité. 
+    Bienvenue chez En Aparté, où chaque instant de beauté devient une expérience unique.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-link">
                             <h4>Information</h4>
                             <ul>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Customer Service</a></li>
-                                <li><a href="#">Our Sitemap</a></li>
-                                <li><a href="#">Terms &amp; Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Delivery Information</a></li>
+                                <li><a href="#">A propos de nous</a></li>
+                                <li><a href="#"> Service Client</a></li>
+                                <li><a href="#">Politique de confidentialité</a></li>
+                                <li><a href="#">Information livraison</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-link-contact">
-                            <h4>Contact Us</h4>
+                            <h4>Contactez-nous</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Address:pharmacie les Elias, <br> Riviera Jardins,<br>  06, 06 BP 883, Abidjan</p>
+                                </li>
+
+                                
+                                <li>
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+225 0789999981"> +225 07 89 99 99 81</a></p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
-                                </li>
-                                <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">enapanteabidjan@gmail.com</a></p>
                                 </li>
                             </ul>
                         </div>
@@ -173,8 +175,8 @@
 
     <!-- Start copyright  -->
     <div class="footer-copyright">
-        <p class="footer-company">Grpoupe LarocheTIC. &copy; 2023 <a href="#">ThewayShop</a> Design By :
-            <a href="https://html.design/">Laroche</a></p>
+        <p class="footer-company">Grpoupe LarocheTIC. &copy; 2023 <a href="#">en APARTÉ</a> Conception par :
+            <a href="https://html.design/">Groupe LarocheTIC</a></p>
     </div>
     <!-- End copyright  -->
 

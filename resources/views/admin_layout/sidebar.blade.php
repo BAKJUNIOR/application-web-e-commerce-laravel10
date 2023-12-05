@@ -40,7 +40,7 @@
               </li>
             </ul>
           </li>
-          
+
           <li class="nav-item has-treeview {{request()->is('Admin/Categorie') || request()->is('Admin/addCategorie') ? 'menu-open' : ''}} ">
             <a href="#" class="nav-link {{request()->is('Admin/Categorie') || request()->is('Admin/addCategorie') ? 'active' : ''}}">
               <i class="nav-icon fas fa-folder"></i>
@@ -137,13 +137,6 @@
             </ul>
           </li>
 
-          <li class="nav-header">MISCELLANEOUS</li>
-          <li class="nav-item">
-            <a href="https://adminlte.io/docs/3.0/" class="nav-link">
-              <i class="nav-icon fas fa-file"></i>
-              <p>Documentation</p>
-            </a>
-          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
