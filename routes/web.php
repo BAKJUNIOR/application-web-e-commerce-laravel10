@@ -32,6 +32,10 @@ Route::get('/panier', [clientController::class ,'panier']); // rédiriger vers l
 Route::get('/checkout', [clientController::class ,'checkout']); // rédiriger vers la page payement
 Route::get('/inscription', [clientController::class ,'inscription']); // rédiriger vers la page inscription
 Route::get('/connexion', [clientController::class ,'connexion']); // rédiriger vers la page connexion
+Route::get('/AjouterPanier/{id}', [clientController::class ,'AjouterPanier']); // rédiriger vers la page panier
+
+
+
 
 
 // Admin Controller routes

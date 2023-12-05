@@ -72,6 +72,12 @@
                     <label for="exampleInputEmail1">Product price</label>
                     <input type="number" required name="product_price" value="{{$products->product_price}}"  class="form-control" id="exampleInputEmail1" placeholder="Enter product price" min="1">
                   </div>
+
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Product detaille</label>
+                    <input type="text" required name="product_detaille" value="{{$products->product_detaille}}"  class="form-control" id="exampleInputEmail1" placeholder="Enter product detaille" min="1">
+                  </div>
+
                   <div class="form-group">
                     <label>Product category</label>
                     <select name="product_categorie"  required class="form-control select2" style="width: 100%;">

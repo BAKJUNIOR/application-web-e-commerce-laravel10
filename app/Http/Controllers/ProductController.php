@@ -17,6 +17,7 @@ class ProductController extends Controller
                 'product_name'=>'required',
                 'product_price'=>'required',
                 'product_categorie'=>'required',
+                'product_detaille'=>'required',
                 'product_image'=>'image|nullable|max:1999'
               
             ]);
@@ -42,6 +43,7 @@ class ProductController extends Controller
             $product->product_name = $request->input("product_name");
             $product->product_price = $request->input("product_price");
             $product->product_categorie = $request->input("product_categorie");
+            $product->product_detaille = $request->input("product_detaille");
             $product->product_image = $fileNameToStore;
       
             $product->save();

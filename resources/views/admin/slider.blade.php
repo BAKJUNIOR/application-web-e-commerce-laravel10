@@ -56,10 +56,10 @@
                   </tr>
                   </thead>
                   <tbody>
-                   
+
                     @foreach ($sliders as $slider)
 
-                    
+
                   <tr>
                     <td>{{$increment}}</td>
                     <td>
@@ -78,7 +78,7 @@
                       <form action="{{url('/Admin/DesactiverSlider/'.$slider->id)}}" method="POST">
                         @csrf
                         @method('PUT')
-              
+
                       <input type="submit"  class="btn btn-success" value="Desactiver">
                       </form>
 
@@ -86,7 +86,7 @@
                       <form action="{{url('/Admin/activerSlider/'.$slider->id)}}" method="POST">
                         @csrf
                         @method('PUT')
-              
+
                       <input type="submit"  class="btn btn-warning" value="Activer">
                       </form>
                       @endif
@@ -100,10 +100,10 @@
                         <input type="submit" id="delete" value="Supprimer" class="btn btn-danger">
                       </form>
 
-                      </td> 
+                      </td>
                   </tr>
                         {{$increment++}}
-                        
+
                     @endforeach
 
 
@@ -147,15 +147,15 @@
     $(function () {
       $("#example1").DataTable({
         "responsive": true,
-        "autoWidth": false,
+        "autoWidth": true,
       });
       $('#example2').DataTable({
         "paging": true,
-        "lengthChange": false,
-        "searching": false,
+        "lengthChange": true,
+        "searching": true,
         "ordering": true,
         "info": true,
-        "autoWidth": false,
+        "autoWidth": true,
         "responsive": true,
       });
     });
@@ -165,6 +165,6 @@
 <link rel="stylesheet" href="{{ asset('backend/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
 <link rel="stylesheet" href="{{ asset('backend/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
 
-    
+
 @endsection
 

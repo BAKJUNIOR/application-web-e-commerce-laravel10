@@ -53,6 +53,7 @@
                     <th>Picture</th>
                     <th>Product Name</th>
                     <th>Product Category</th>
+                    <th>Product detaille</th>
                     <th>Product Price</th>
                     <th>Actions</th>
                   </tr>
@@ -74,8 +75,11 @@
                       {{$product->product_categorie}}
                       </td>
                       <td>
-                      {{$product->product_price}} 
+                      {{$product->product_detaille}} 
                       </td>
+                      <td>
+                        {{$product->product_price}} 
+                        </td>
                       
                       <td>
   

@@ -11,14 +11,16 @@
     <!-- Start Slider -->
     <div id="slides-shop" class="cover-slides">
         <ul class="slides-container">
+ 
+            @foreach ($sliders as $slider)
+
             <li class="text-center">
-                <img src="fontend/images/a.jpg" alt="">
+                <img src="{{asset('storage/slider_images/'.$slider->image)}}" alt="">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Bienvenue à <br> EN APARTÉ</strong></h1>
-                            <p class="m-b-40" style="font-size: 25px"> Détendez-vous et revitalisez votre esprit avec nos massages exclusifs chez En Aparté. Laissez nos experts vous offrir une expérience de
-                                bien-être inoubliable. <br> Institut de branté et de bien-être, de luxe,  qui priorise la qualité pour ses clients. </p>
+                            <p class="m-b-40" style="font-size: 25px"> {{$slider->description1}} <br> {{$slider->description2}} </p>
                             <p><a class="btn hvr-hover" href="#">Prendre Rendez-vous</a></p>
 
 
@@ -26,34 +28,11 @@
                     </div>
                 </div>
             </li>
-            <li class="text-center">
-                <img src="fontend/images/Enparter.jpg" alt="">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1 class="m-b-20"><strong>Bienvenue à <br> EN APARTÉ</strong></h1>
-                            <p class="m-b-40" style="font-size: 25px"> Transformez vos cheveux avec nos soins capillaires d'élite chez En Aparté. Des produits haut de gamme pour une chevelure éclatante. <br> Institut de branté et de bien-être, de luxe,  qui priorise la qualité pour ses clients. </p>
-                            <p><a class="btn hvr-hover" href="#">Prendre Rendez-vous</a></p>
-                        </div>
+                
+            @endforeach
 
-                    </div>
-                </div>
-            </li>
-            <li class="text-center">
-                <img src="fontend/images/Enparter4.jpg" alt="">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1 class="m-b-20"><strong>Bienvenue à <br> EN APARTÉ</strong></h1>
-                             <p class="m-b-40" style="font-size: 25px"> Découvrez l'excellence en soins de la peau chez En Aparté. Des produits luxueux, soigneusement sélectionnés pour sublimer votre beauté naturelle
-                             <br> Institut de branté et de bien-être, de luxe,  qui priorise la qualité pour ses clients. </p>
-                            <p><a class="btn hvr-hover" href="#">Voir nos produits de soins</a></p>
-
-
-                        </div>
-                    </div>
-                </div>
-            </li>
+         
+           
         </ul>
         <div class="slides-navigation">
             <a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
@@ -138,185 +117,36 @@
             </div> -->
 
             <div class="row special-list">
+
+                @foreach ($products as $product)
+                    
                 <div class="col-lg-3 col-md-6 special-grid best-seller">
                     <div class="products-single fix">
                         <div class="box-img-hover">
                             <div class="type-lb">
                                 <p class="sale">Vente</p>
                             </div>
-                            <img src="fontend/images/produit1.jpg" class="img-fluid" alt="Image">
+                            <img src="{{asset('storage/product_images/'.$product->product_image)}}" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                 </ul>
-                                <a class="cart" href="#">Ajouter au panier</a>
+                                <a class="cart" href="{{url('AjouterPanier/'.$product->id)}}">Ajouter au panier</a>
                             </div>
                         </div>
                         <div class="why-text">
-                            <h4>Fluide visage apaisant</h4>
-                            <h5> $7.79</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Vente</p>
-                            </div>
-                            <img src="fontend/images/produit6.jpg" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                </ul>
-                                <a class="cart" href="#">Ajouter au panier</a>
-                            </div>
-                        </div>
-                        <div class="why-text">
-                            <h4>Fluide visage apaisant</h4>
-                            <h5> $7.79</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Vente</p>
-                            </div>
-                            <img src="fontend/images/produit3.jpg" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                </ul>
-                                <a class="cart" href="#">Ajouter au panier</a>
-                            </div>
-                        </div>
-                        <div class="why-text">
-                            <h4>Fluide visage apaisant</h4>
-                            <h5> $7.79</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Vente</p>
-                            </div>
-                            <img src="fontend/images/produit4.jpg" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                </ul>
-                                <a class="cart" href="#">Ajouter au panier</a>
-                            </div>
-                        </div>
-                        <div class="why-text">
-                            <h4>Fluide visage apaisant</h4>
-                            <h5> $7.79</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Vente</p>
-                            </div>
-                            <img src="fontend/images/produit5.jpg" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                </ul>
-                                <a class="cart" href="#">Ajouter au panier</a>
-                            </div>
-                        </div>
-                        <div class="why-text">
-                            <h4>Fluide visage apaisant</h4>
-                            <h5> $7.79</h5>
+                            <h4>{{$product->product_name}}</h4>
+                            <h5> {{$product->product_price}} FCFA</h5>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 special-grid top-featured">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="new">New</p>
-                            </div>
-                            <img src="fontend/images/produit6.jpg" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                </ul>
-                                <a class="cart" href="#">Ajouter au panier</a>
-                            </div>
-                        </div>
-                        <div class="why-text">
-                            <h4>Fluide visage apaisant</h4>
-                            <h5> $9.79</h5>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
 
-                <div class="col-lg-3 col-md-6 special-grid top-featured">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Vente</p>
-                            </div>
-                            <img src="fontend/images/produit7.jpg" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                </ul>
-                                <a class="cart" href="#">Ajouter au panier</a>
-                            </div>
-                        </div>
-                        <div class="why-text">
-                            <h4>Fluide visage apaisant</h4>
-                            <h5> $10.79</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Vente</p>
-                            </div>
-                            <img src="fontend/images/produit1.jpg" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                </ul>
-                                <a class="cart" href="#">Ajouter au panier</a>
-                            </div>
-                        </div>
-                        <div class="why-text">
-                            <h4>Fluide visage apaisant</h4>
-                            <h5> $15.79</h5>
-                        </div>
-                    </div>
-                </div>
+ 
+                
             </div>
         </div>
     </div>
