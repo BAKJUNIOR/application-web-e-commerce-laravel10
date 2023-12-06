@@ -33,7 +33,11 @@ Route::get('/checkout', [clientController::class ,'checkout']); // rédiriger ve
 Route::get('/inscription', [clientController::class ,'inscription']); // rédiriger vers la page inscription
 Route::get('/connexion', [clientController::class ,'connexion']); // rédiriger vers la page connexion
 Route::get('/AjouterPanier/{id}', [clientController::class ,'AjouterPanier']); // rédiriger vers la page panier
-
+Route::put('/panier/modifierQte/{id}', [clientController::class ,'modifierQte']);
+Route::get('/panier/supprimerItem/{id}', [clientController::class ,'supprimerItem']);
+Route::post('/createCompte', [clientController::class ,'createCompte']);
+Route::post('/connexionCompte', [clientController::class ,'connexionCompte']);
+Route::get('/logout', [clientController::class ,'logout']);
 
 
 
@@ -48,11 +52,14 @@ Route::get('/Admin/addproduct', [AdminController::class ,'addproduct']);
 Route::get('/Admin/product', [AdminController::class ,'product']);  
 Route::get('/Admin/order', [AdminController::class ,'order']);  
 
+
+
 // Categories controller
 Route::post('/Admin/SaveCategorie', [CategorieController::class ,'SaveCategorie']);  // Savegarder vers la base de donnée
 Route::delete('/Admin/deleteCategorie/{id}', [CategorieController::class ,'deleteCategorie']);  
 Route::get('/Admin/editeCategorie/{id}', [CategorieController::class ,'editeCategorie']);  
 Route::put('/Admin/UpdateCategorie/{id}', [CategorieController::class ,'UpdateCategorie']);  
+
 
 // Slider controller
 Route::post('/Admin/SaveSlider', [SliderController::class ,'SaveSlider']);  
@@ -61,6 +68,9 @@ Route::get('/Admin/editeSlider/{id}', [SliderController::class ,'editeSlider']);
 Route::put('/Admin/UpdateSlider/{id}', [SliderController::class ,'UpdateSlider']);  
 Route::put('/Admin/DesactiverSlider/{id}', [SliderController::class ,'DesactiverSlider']);  
 Route::put('/Admin/activerSlider/{id}', [SliderController::class ,'activerSlider']);  
+
+
+
 
 // Product controller
 Route::post('/Admin/SaveProduct', [ProductController::class ,'SaveProduct']); 

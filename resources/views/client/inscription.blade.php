@@ -27,7 +27,7 @@
 <!-- Start Cart  -->
 <div class="cart-box-main">
     <div class="container">
-        <div class="row new-account-login">
+      <!--  <div class="row new-account-login">
             <div class="col-sm-6 col-lg-6 mb-3">
                 <form class="mt-3 collapse review-form-box" id="formLogin">
                     <div class="form-row">
@@ -45,13 +45,13 @@
                 <form class="mt-3 collapse review-form-box" id="formRegister">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="InputName" class="mb-0">First Name</label>
+                            <label for="InputName" class="mb-0">Nom</label>
                             <input type="text" class="form-control" id="InputName" placeholder="First Name"> </div>
                         <div class="form-group col-md-6">
-                            <label for="InputLastname" class="mb-0">Last Name</label>
+                            <label for="InputLastname" class="mb-0">Prenoms</label>
                             <input type="text" class="form-control" id="InputLastname" placeholder="Last Name"> </div>
                         <div class="form-group col-md-6">
-                            <label for="InputEmail1" class="mb-0">Email Address</label>
+                            <label for="InputEmail1" class="mb-0">Adresse mail</label>
                             <input type="email" class="form-control" id="InputEmail1" placeholder="Enter Email"> </div>
                         <div class="form-group col-md-6">
                             <label for="InputPassword1" class="mb-0">Password</label>
@@ -60,36 +60,62 @@
                     <button type="submit" class="btn hvr-hover">S'inscrire</button>
                 </form>
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <div class="col-sm-6 col-lg-6 mb-3 offset-sm-3 offset-lg-3">
                 <div class="Account-address">
                     <div class="title-left">
+
+                        @if (count($errors) > 0)
+                            <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li >{{$error}}</li>
+                                @endforeach
+                                
+                            </ul>
+                            </div>
+                        @endif
+
+                        @if (Session :: has("status"))
+                                <div class="alert alert-success">
+                                {{Session::get("status")}}
+                                </div>
+                        @endif
+
                         <h3>S'inscrire / Vous avez déjà un compte ? <a href="{{url('/connexion')}}"> Se connecter</a></h3>
                     </div>
-                    <form class="needs-validation" >
-                        <!-- <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="firstName">First name *</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                                <div class="invalid-feedback"> Valid first name is required. </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="lastName">Last name *</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                                <div class="invalid-feedback"> Valid last name is required. </div>
-                            </div>
-                        </div> -->
 
+                    <form action="{{url('/createCompte')}}" method="POST">
+                      
+                        @csrf
                         <div class="mb-3">
-                            <label for="email">Email Address *</label>
-                            <input type="email" class="form-control" id="email" placeholder="" required>
+                            <label for="nom">Nom *</label>
+                            <input type="text" name="nom" class="form-control" id="email" placeholder="" required>
                             <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
                         </div>
 
                         <div class="mb-3">
-                            <label for="email">Password *</label>
-                            <input type="password" class="form-control" id="email" placeholder="" required>
+                            <label for="prenom">Prenom *</label>
+                            <input type="text" name="prenom" class="form-control" id="email" placeholder="" required>
+                            <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email">Email Address *</label>
+                            <input type="email" name="email" class="form-control" id="email" placeholder="" required>
+                            <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="passwoed">Password *</label>
+                            <input type="password" name="password" class="form-control" id="email" placeholder="" required>
+                            <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="text">Adresse *</label>
+                            <input type="text" name="adresse" class="form-control" id="email" placeholder="" required>
                             <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
                         </div>
 
@@ -100,6 +126,7 @@
                         </div>
                         <hr class="mb-1"> 
                     </form>
+                    
                 </div>
             </div>
         </div>

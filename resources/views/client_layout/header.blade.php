@@ -15,8 +15,16 @@
                     <p>Appelez-nous :- <a href="#"> +225 0789999981</a></p>
                 </div>
                 <div class="our-link">
+             
                     <ul>
-                        <li><a href="#"><i class="fa fa-user s_color"></i> MON COMPTE</a></li>
+
+                 @if (Session :: has('client'))
+                   <li><a href="{{url('logout')}}"><i class="fa fa-user s_color"></i> Se déconnecter</a></li>
+                     @else
+                     <li><a href="{{url('connexion')}}"><i class="fa fa-user s_color"></i> Se Connecter </a></li>
+                 @endif
+
+                    
                         <li><a href="https://maps.app.goo.gl/QsyXfA7LMm2B5Cxr6"><i class="fas fa-location-arrow"></i> NOTRE EMPLACEMENT</a></li>
                         <li><a href="tel:+225 0789999981"><i class="fas fa-headset"></i> CONTACTEZ-NOUS</a></li>
                     </ul>
@@ -132,7 +140,7 @@
 
                     <li class="total">
                         <a href="{{url('/panier')}}" class="btn btn-default hvr-hover btn-cart">VOIR PANIER</a>
-                        <span class="float-none"><strong>Total</strong>:{{Session::get('cart')->totalPrice}}</span>
+                        <span class="float-none"><strong>Total</strong>:{{Session:: has('cart') ? Session::get('cart')->totalPrice : 0}} FCFA</span>
                     </li>
                 </ul>
             </li>

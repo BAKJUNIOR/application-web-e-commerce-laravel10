@@ -16,7 +16,7 @@
                 <h2>Account</h2>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Shop</a></li>
-                    <li class="breadcrumb-item active">Account</li>
+                    <li class="breadcrumb-item active">Compte</li>
                 </ul>
             </div>
         </div>
@@ -65,40 +65,38 @@
             <div class="col-sm-6 col-lg-6 mb-3 offset-sm-3 offset-lg-3">
                 <div class="Account-address">
                     <div class="title-left">
-                        <h3>Se connecter / Vous n'avez pas de compte ? <a href="{{url('/inscription')}}">S'inscrire</h3>
+
+
+                        @if (Session :: has("error"))
+                        <div class="alert alert-danger">
+                        {{Session::get("error")}}
+                        </div>
+                       @endif
+                        
+                        <h3>Se connecter / Vous n'avez pas de compte ? <a href="{{url('/inscription')}}">S'inscrire</a></h3>
                     </div>
-                    <form class="needs-validation" >
-                        <!-- <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="firstName">First name *</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                                <div class="invalid-feedback"> Valid first name is required. </div>
+
+                    <form action="{{url('/connexionCompte')}}" method="POST">
+                        
+                          @csrf
+                            <div class="mb-3">
+                                <label for="email">Email Address </label>
+                                <input type="email" name="email" class="form-control" id="email" placeholder="" required>
+                                <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="lastName">Last name *</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                                <div class="invalid-feedback"> Valid last name is required. </div>
+
+                            <div class="mb-3">
+                                <label for="email">Password *</label>
+                                <input type="password" name="password" class="form-control" id="email" placeholder="" required>
+                                <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
                             </div>
-                        </div> -->
 
-                        <div class="mb-3">
-                            <label for="email">Email Address *</label>
-                            <input type="email" class="form-control" id="email" placeholder="" required>
-                            <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="email">Password *</label>
-                            <input type="password" class="form-control" id="email" placeholder="" required>
-                            <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
-                        </div>
-
-                        <div class="row">
-                                <div class="col-md-12 mb-12">
-                                    <input type="submit" value=" Se Connecter" class="btn btn-default hvr-hover btn-cart w-100">
-                                </div>
-                        </div>
-                        <hr class="mb-1"> 
+                            <div class="row">
+                                    <div class="col-md-12 mb-12">
+                                        <input type="submit" value=" Se Connecter" class="btn btn-default hvr-hover btn-cart w-100">
+                                    </div>
+                            </div>
+                            <hr class="mb-1"> 
                     </form>
                 </div>
             </div>

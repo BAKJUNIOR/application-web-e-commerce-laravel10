@@ -79,17 +79,13 @@
                                 <div class="invalid-feedback"> Valid last name is required. </div>
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="email">Email Address *</label>
-                            <input type="email" class="form-control" id="email" placeholder="">
-                            <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
-                        </div>
+                        
                         <div class="mb-3">
                             <label for="address">Address *</label>
                             <input type="text" class="form-control" id="address" placeholder="" required>
                             <div class="invalid-feedback"> Please enter your shipping address. </div>
                         </div>
-                        <hr class="mb-4">
+                       <!-- <hr class="mb-4">
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="cc-name">Name on card</label>
@@ -128,7 +124,7 @@
                                 <input type="submit" value="Acheter maintenant" class="btn btn-default hvr-hover btn-cart w-100">
                             </div>
                         </div>
-                        <hr class="mb-1"> 
+                        <hr class="mb-1"> -->
                     </form>
                 </div>
             </div>
