@@ -44,7 +44,7 @@ public function convert_orders_data_to_html()
     });
 
     $output = '
-    <link rel="stylesheet" href="frontend/css/style1.css">
+    <link rel="stylesheet" href="fontend/css/style1.css">
     <table class="table">
         <thead class="thead">
             <tr class="text-left">
