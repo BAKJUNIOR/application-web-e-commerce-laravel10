@@ -66,25 +66,37 @@
                     <div class="title-left">
                         <h3>Adresse de facturation </h3>
                     </div>
-                    <form class="needs-validation" novalidate>
+
+
+                    <form action="{{url('payer')}}" method="POST">
+
+                        @csrf
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="firstName">First name *</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                                <input type="text" class="form-control" name="nom" id="firstName" placeholder="" value="" required>
                                 <div class="invalid-feedback"> Valid first name is required. </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="lastName">Last name *</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                                <input type="text" class="form-control" name="prenoms" id="lastName" placeholder="" value="" required>
                                 <div class="invalid-feedback"> Valid last name is required. </div>
                             </div>
                         </div>
                         
                         <div class="mb-3">
                             <label for="address">Address *</label>
-                            <input type="text" class="form-control" id="address" placeholder="" required>
+                            <input type="text" class="form-control" name="adresse" id="address" placeholder="" required>
                             <div class="invalid-feedback"> Please enter your shipping address. </div>
                         </div>
+
+                        <div class="row">
+                                    <div class="col-md-12 mb-12">
+                                        <input type="submit" value="Acheter maintenant" class="btn btn-default hvr-hover btn-cart w-100">
+                                    </div>
+                            </div>
+
+
                        <!-- <hr class="mb-4">
                         <div class="row">
                             <div class="col-md-6 mb-3">

@@ -34,7 +34,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">All categories</h3>
+                <h3 class="card-title">Ajouter Catégorie</h3>
               </div>
 
               @if (Session :: has("status"))
@@ -50,8 +50,8 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                    <th>Num.</th>
-                    <th>Category Name</th>
+                    <th>Numéro</th>
+                    <th>Nom Catégorie</th>
                     <th>Actions</th>
                   </tr>
                   </thead>
@@ -81,8 +81,8 @@
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>Num.</th>
-                    <th>Category Name</th>
+                    <th>Numéro</th>
+                    <th>Nom Catégorie</th>
                     <th>Actions</th>
                   </tr>
                   </tfoot>

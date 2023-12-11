@@ -9,6 +9,7 @@ use App\Models\Product;
 use App\Models\Client;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Order;
 
 class clientController extends Controller
 {
@@ -146,6 +147,24 @@ class clientController extends Controller
 
   return back();
 
+
+   }
+
+   public function payer(Request $request){
+
+    $oldCard = Session :: has ('cart') ? Session::get('cart') : null;
+    $cart = new Cart($oldCard);
+
+       $order = new Order(); // Crée une instance order 
+       $order->names = $request->input('nom').' '.$request->input('prenoms'); // Appelons le nom&prenom dépuis la base de donnée
+       $order->adress = $request->input('adresse');
+       $order->panier = serialize($cart);// serialize permet d'entregistrer tout cequ'on a dans le panier dans la BD dns le champs panier
+ 
+       $order->save();
+       
+       Session::forget('topCart');
+       Session::forget('cart');//effacer tout cequi est dans mon panier : le vider
+       return redirect('/panier')->with('status','Votre Commande a été effectuer avec succes !!');
 
    }
    

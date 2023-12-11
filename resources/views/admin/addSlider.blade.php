@@ -33,7 +33,7 @@
             <!-- jquery validation -->
             <div class="card card-warning">
               <div class="card-header">
-                <h3 class="card-title">Add slider</h3>
+                <h3 class="card-title">Ajouter Slider</h3>
               </div>
     
               <!-- /.card-header -->
@@ -62,18 +62,18 @@
                 @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Slider description 1</label>
+                    <label for="exampleInputEmail1"> 1ere description du Slider</label>
                     <input type="text" required name="description1" class="form-control" id="exampleInputEmail1" placeholder="Enter slider description">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Slider description 2</label>
+                    <label for="exampleInputEmail1">2eme description du Slider</label>
                     <input type="text" required name="description2" class="form-control" id="exampleInputEmail1" placeholder="Enter slider description">
                   </div>
-                  <label for="exampleInputFile">Slider image</label>
+                  <label for="exampleInputFile">Image Slider</label>
                   <div class="input-group">
                     <div class="custom-file">
                       <input type="file" required  name="image" class="custom-file-input" id="exampleInputFile">
-                      <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      <label class="custom-file-label" for="exampleInputFile">Choisir Image</label>
                     </div>
                     <div class="input-group-append">
                       <span class="input-group-text">Upload</span>

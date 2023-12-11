@@ -38,6 +38,8 @@ Route::get('/panier/supprimerItem/{id}', [clientController::class ,'supprimerIte
 Route::post('/createCompte', [clientController::class ,'createCompte']);
 Route::post('/connexionCompte', [clientController::class ,'connexionCompte']);
 Route::get('/logout', [clientController::class ,'logout']);
+Route::post('/payer', [clientController::class ,'payer']);
+
 
 
 

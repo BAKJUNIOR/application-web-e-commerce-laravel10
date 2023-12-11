@@ -14,7 +14,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Product</h1>
+            <h1>Ajouter des produits</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -35,7 +35,7 @@
             <!-- jquery validation -->
             <div class="card card-warning">
               <div class="card-header">
-                <h3 class="card-title">Add product</h3>
+                <h3 class="card-title"> Ajouter Produit</h3>
               </div>
               <!-- /.card-header -->
 
@@ -64,21 +64,21 @@
               @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Product name</label>
+                    <label for="exampleInputEmail1">Nom Produit</label>
                     <input type="text" required name="product_name" class="form-control" id="exampleInputEmail1" placeholder="Enter product name">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Product price</label>
+                    <label for="exampleInputEmail1">Prix Produit</label>
                     <input type="number" required name="product_price" class="form-control" id="exampleInputEmail1" placeholder="Enter product price" min="1">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Product detaille</label>
+                    <label for="exampleInputEmail1"> detaille Produit</label>
                     <input type="text" required name="product_detaille" class="form-control" id="exampleInputEmail1" placeholder="Enter product detaille" min="1">
                   </div>
                   <div class="form-group">
-                    <label>Product category</label>
+                    <label>Produit Catégirie</label>
                     <select name="product_categorie"  required class="form-control select2" style="width: 100%;">
-                      <option selected="selected" value="">Sélectionner catégorie</option>
+                      <option selected="selected" value="">Sélectionner la catégorie</option>
 
                       @foreach ($categories as $categorie)
                       <option>{{$categorie->categorie_name}}</option>
@@ -87,11 +87,11 @@
 
                     </select>
                   </div>
-                  <label for="exampleInputFile">Product image</label>
+                  <label for="exampleInputFile">image Produit</label>
                   <div class="input-group">
                     <div class="custom-file">
                       <input type="file" name="product_image" required class="custom-file-input" id="exampleInputFile">
-                      <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      <label class="custom-file-label" for="exampleInputFile">Choisir Image</label>
                     </div>
                     <div class="input-group-append">
                       <span class="input-group-text">Upload</span>
@@ -101,7 +101,7 @@
                 <!-- /.card-body -->
                 <div class="card-footer">
                   <!-- <button type="submit" class="btn btn-success">Submit</button> -->
-                  <input type="submit" class="btn btn-warning" value="Save">
+                  <input type="submit" class="btn btn-warning" value="Sauvegarder">
                 </div>
 
               </form>

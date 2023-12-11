@@ -29,6 +29,14 @@ EN APARTÉ | Panier
         <div class="row">
             <div class="col-lg-12">
                 <div class="table-main table-responsive">
+
+         @if (Session::has('status'))
+         <div class="alert alert-success">
+            {{Session::get('status')}}
+         </div>
+         
+         @endif
+
                     <table class="table">
                         <thead>
                             <tr>
@@ -135,7 +143,7 @@ EN APARTÉ | Panier
                     <hr>
                     <div class="d-flex gr-total">
                         <h5>Grand Total</h5>
-                        <div class="ml-auto h5"> {{ number_format(Session::get('cart')->totalPrice, 2) }}FCFA </div>
+                        <div class="ml-auto h5"> {{Session::has('cart') ? number_format(Session::get('cart')->totalPrice, 2) : 0}} FCFA </div>
                     </div>
                     <hr> </div>
             </div>

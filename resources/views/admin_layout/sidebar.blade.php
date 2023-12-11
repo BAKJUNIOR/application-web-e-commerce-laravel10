@@ -27,7 +27,7 @@
             <a href="#" class="nav-link {{request()->is('Admin') ? 'active' : ''}}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard
+                Tableau de bord
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -35,7 +35,7 @@
               <li class="nav-item">
                 <a href="{{url('/Admin')}}" class="nav-link {{request()->is('Admin') ? 'active' : ''}}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
+                  <p>Tableau de bord v1</p>
                 </a>
               </li>
             </ul>
@@ -53,7 +53,7 @@
               <li class="nav-item">
                 <a href="{{url('/Admin/addCategorie')}}" class="nav-link {{request()->is('Admin/addCategorie') ? 'active' : ''}}">
                   <i class="far fa-file nav-icon"></i>
-                  <p>Add category</p>
+                  <p>Ajouter Categories</p>
                 </a>
               </li>
             </ul>
@@ -79,7 +79,7 @@
               <li class="nav-item">
                 <a href="{{url('/Admin/addSlider')}}" class="nav-link {{request()->is('Admin/addSlider') ? 'active' : ''}}">
                   <i class="far fa-file nav-icon"></i>
-                  <p>Add slider</p>
+                  <p>Ajouter Sliders</p>
                 </a>
               </li>
             </ul>
@@ -97,7 +97,7 @@
             <a href="#" class="nav-link {{request()->is('Admin/product') || request()->is('Admin/addproduct') ? 'active' : ''}}">
               <i class="nav-icon fas fa-folder"></i>
               <p>
-                Products
+                Produits
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -105,7 +105,7 @@
               <li class="nav-item">
                 <a href="{{url('/Admin/addproduct')}}" class="nav-link {{request()->is('Admin/addproduct') ? 'active' : ''}}">
                   <i class="far fa-file nav-icon"></i>
-                  <p>Add product</p>
+                  <p>Ajouter Produits</p>
                 </a>
               </li>
             </ul>
@@ -113,7 +113,7 @@
               <li class="nav-item">
                 <a href="{{url('/Admin/product')}}" class="nav-link {{request()->is('Admin/product') ? 'active' : ''}}">
                   <i class="far fa-file nav-icon"></i>
-                  <p>Products</p>
+                  <p>Produits</p>
                 </a>
               </li>
             </ul>
@@ -123,7 +123,7 @@
             <a href="#" class="nav-link {{request()->is('Admin/order')  ? 'active' : ''}}">
               <i class="nav-icon fas fa-folder"></i>
               <p>
-                Orders
+                Commandes
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -131,7 +131,7 @@
               <li class="nav-item">
                 <a href="{{url('/Admin/order')}}" class="nav-link {{request()->is('Admin/order')  ? 'active' : ''}}">
                   <i class="far fa-file nav-icon"></i>
-                  <p>Orders</p>
+                  <p>Ajouter Commandes</p>
                 </a>
               </li>
             </ul>
