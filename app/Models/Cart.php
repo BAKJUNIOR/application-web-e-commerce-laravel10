@@ -23,6 +23,7 @@ namespace App\Models;
 
             $storedItem = ['qty' => 0, 'product_id' => 0, 'product_name' => $item->product_name,
             'product_price' => $item->product_price, 'product_image' => $item->product_image, 'item' =>$item];
+           
 
             if($this->items){
                 if(array_key_exists($item->id, $this->items)){
@@ -37,6 +38,7 @@ namespace App\Models;
             $storedItem['product_image'] = $item->product_image;
             $this->totalQty++;
             $this->totalPrice += $item->product_price;
+            $this->totalPrice = number_format($this->totalPrice, 2, '.', ''); 
             $this->items[$item->id] = $storedItem;
 
         }
@@ -47,6 +49,7 @@ namespace App\Models;
             $this->items[$id]['qty'] = $qty;
             $this->totalQty += $qty;
            $this->totalPrice += $this->items[$id]['product_price'] * $qty;
+           $this->totalPrice = number_format($this->totalPrice, 2, '.', '');
 
         }
 
