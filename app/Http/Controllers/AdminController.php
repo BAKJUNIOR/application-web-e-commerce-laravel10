@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Categories;
 use App\Models\Product;
 use App\Models\Slider;
+use App\Models\Order;
 
 class AdminController extends Controller
 {
@@ -46,6 +47,16 @@ class AdminController extends Controller
      }
 
      public function order(){
-        return view('Admin.order');
+
+      $orders = Order::All();
+
+      $orders-> transform(function($order , $key){
+         
+         $order->panier = unserialize($order->panier);
+         return $order;
+      });
+
+
+        return view('Admin.order')->with('orders', $orders);
      }
 } 

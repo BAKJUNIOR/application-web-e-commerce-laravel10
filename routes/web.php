@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\pdfController;
 
 
 /*
@@ -81,3 +82,7 @@ Route::get('/Admin/editeProduct/{id}', [ProductController::class ,'editeProduct'
 Route::put('/Admin/UpdateProduct/{id}', [ProductController::class ,'UpdateProduct']); 
 Route::put('/Admin/DesactiverProduct/{id}', [ProductController::class ,'DesactiverProduct']); 
 Route::put('/Admin/activerProduct/{id}', [ProductController::class ,'activerProduct']);
+
+//pdf controller 
+Route::get('/VoirCommande/{id}', [pdfController::class ,'VoirCommande']);
+

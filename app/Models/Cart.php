@@ -38,7 +38,7 @@ namespace App\Models;
             $storedItem['product_image'] = $item->product_image;
             $this->totalQty++;
             $this->totalPrice += $item->product_price;
-            $this->totalPrice = number_format($this->totalPrice, 2, '.', ''); 
+            $this->totalPrice = $this->totalPrice; 
             $this->items[$item->id] = $storedItem;
 
         }
