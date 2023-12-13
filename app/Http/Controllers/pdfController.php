@@ -33,7 +33,7 @@ public function convert_orders_data_to_html()
 
     foreach ($orders as $order) {
         $nom = $order->names;
-        $adresse = $order->adresse;
+        $adresse = $order->adress;
         $date = $order->created_at;
     }
 
@@ -48,7 +48,7 @@ public function convert_orders_data_to_html()
     <table class="table">
         <thead class="thead">
             <tr class="text-left">
-                <th>Client Name : ' . $nom . '<br> Client Adresse : ' . $adresse . ' <br> Date : ' . $date . '</th>
+                <th>Nom du Client : ' . $nom . '<br>Adresse Client : ' . $adresse . ' <br> Date Commande : ' . $date . '</th>
             </tr>
         </thead>
     </table>
@@ -77,7 +77,7 @@ public function convert_orders_data_to_html()
                 </td>
                 <td class="price">' . $item['product_price'] . '</td>
                 <td class="qty">' . $item['qty'] . '</td>
-                <td class="total">FCFA ' . $item['product_price'] * $item['qty'] . '</td>
+                <td class="total">' . $item['product_price'] * $item['qty'] . ' FCFA </td>
             </tr>';
         }
         $totalPrice = $order->panier->totalPrice;
